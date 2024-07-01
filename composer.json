@@ -1,6 +1,7 @@
 {
     "name": "polygoncoin/cache-handler",
     "description": "Issue \"HTTP/1.1 304 Not Modified\" response for cached files",
+    "keywords": ["HTTP/1.1 304 Not Modified", "Browser Cache", "304", "Cache", "Speed"],
     "type": "library",
     "license": "MIT",
     "authors": [
