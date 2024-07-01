@@ -1,0 +1,12 @@
+{
+    "name": "ramesh/cache-handler",
+    "description": "Issue \"HTTP/1.1 304 Not Modified\" response for cached files",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ramesh N Jangid"
+        }
+    ],
+    "require": {}
+}
