@@ -35,7 +35,7 @@ class CacheHandler
     public function init($relativeFilePath)
     {
         $filePath = '/' . trim(str_replace('../','',urldecode($relativeFilePath)), './');
-        $fileLocation = $this->$cacheLocation . $filePath;
+        $fileLocation = $this->cacheLocation . $filePath;
 
         if (!file_exists($fileLocation)) {
             header('HTTP/1.0 404 Not Found');
