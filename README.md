@@ -5,10 +5,11 @@ Issue "HTTP/1.1 304 Not Modified" response for cached files
 
 ## Usage
  
+```PHP
+include_once ('CacheHandler.php');
 
-    include_once ('CacheHandler.php');
-    
-    $filePath = $_GET['file'];
-    
-    $cacheHandler = new CacheHandler();
-    $cacheHandler->init($filePath);
+$filePath = $_GET['file'];
+
+$cacheHandler = new CacheHandler();
+$cacheHandler->init($filePath);
+```
