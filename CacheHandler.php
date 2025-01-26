@@ -6,7 +6,7 @@
  * Helps browser avoid unwanted hits to un-modified content on the server
  * which are cached on client browser.
  * The headers in class helps fetch only the modified content.
- * 
+ *
  * @category   PHP E-Tags
  * @package    Cache handler
  * @author     Ramesh Narayan Jangid
@@ -18,10 +18,10 @@ class CacheHandler
 {
     /**
      * Cache Folder
-     * 
+     *
      * The folder location outside docroot
      * without a slash at the end
-     * 
+     *
      * @var string
      */
     private $cacheLocation = '/var/www/resources';
@@ -56,8 +56,8 @@ class CacheHandler
                 isset($_SERVER['HTTP_IF_MODIFIED_SINCE']) &&
                 @strtotime($_SERVER['HTTP_IF_MODIFIED_SINCE']) == $modifiedTime
             )
-        ) { 
-            header('HTTP/1.1 304 Not Modified'); 
+        ) {
+            header('HTTP/1.1 304 Not Modified');
             exit;
         }
         $this->serveFile($fileLocation, $modifiedTime, $eTag);
@@ -80,7 +80,7 @@ class CacheHandler
 
         // Headers
         header('Cache-Control: max-age=0, must-revalidate');
-        header("Last-Modified: ".gmdate("D, d M Y H:i:s", $modifiedTime)." GMT"); 
+        header("Last-Modified: ".gmdate("D, d M Y H:i:s", $modifiedTime)." GMT");
         header("Etag:'{$eTag}'");
         header('Expires: -1');
         header("Content-Type: {$mime}");
