@@ -6,7 +6,9 @@ Issue "HTTP/1.1 304 Not Modified" response for cached files
 ## Usage
 
 ```PHP
-include_once ('CacheHandler.php');
+require_once __DIR__ . '/Autoload.php';
+
+use CacheHandler\CacheHandler;
 
 $filePath = $_GET['file'];
 
